@@ -5,6 +5,7 @@ import Navbar from './components/navbar/navbar'
 import Shop from './pages/Shop'
 import Cart from './pages/Cart'
 import LoginSignup from './pages/LoginSignup'
+import Footer from './components/footer/Footer'
 const App = () => {
   return (
     <div>
@@ -20,7 +21,9 @@ const App = () => {
       <Route path='/cart' element={<Cart/>}></Route>
       <Route path='/login' element={<LoginSignup/>}></Route>
       </Routes>
+      <Footer/>
       </BrowserRouter>
+
     </div>
   )
 }
