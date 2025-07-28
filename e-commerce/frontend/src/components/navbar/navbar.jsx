@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './navbar.css'
 import logo from '../assets/logo.png'
 import cart_icon from '../assets/cart_icon.png'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
-    const[Menu,Setmenu]=useState('shop')
+    const location = useLocation();
+    const pathname = location.pathname;
   return (
 <div className='navbar'>
 <div className="nav-logo">
@@ -13,10 +14,10 @@ const Navbar = () => {
     <p>SHOPPER</p>
 </div>
 <ul className='nav_menu'>
-    <li onClick={()=>{Setmenu('shop')}}><Link style={{textDecoration:'none',color:'black'}} to="/">Shop</Link>{Menu==='shop' ? <hr/>: <></>}</li>
-    <li onClick={()=>{Setmenu('men')}}><Link style={{textDecoration:'none',color:'black'}} to="/men">Men</Link> {Menu==='men' ? <hr/>: <></>}</li>
-    <li onClick={()=>{Setmenu('women')}}><Link style={{textDecoration:'none',color:'black'}} to="/women">Women</Link> {Menu==='women' ? <hr/>: <></>}</li>
-    <li onClick={()=>{Setmenu('kids')}}><Link style={{textDecoration:'none',color:'black'}} to="/kids">Kids</Link> {Menu==='kids' ? <hr/>: <></>}</li>
+    <li><Link style={{textDecoration:'none',color:'black'}} to="/">Shop</Link>{pathname==='/' ? <hr/>: <></>}</li>
+    <li><Link style={{textDecoration:'none',color:'black'}} to="/men">Men</Link> {pathname==='/men' ? <hr/>: <></>}</li>
+    <li><Link style={{textDecoration:'none',color:'black'}} to="/women">Women</Link> {pathname==='/women' ? <hr/>: <></>}</li>
+    <li><Link style={{textDecoration:'none',color:'black'}} to="/kids">Kids</Link> {pathname==='/kids' ? <hr/>: <></>}</li>
 </ul>
 <div className="nav-login-cart">
     <button><Link style={{textDecoration:'none',color:'black'}} to='/login'>Login</Link></button>

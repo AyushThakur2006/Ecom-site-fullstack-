@@ -19,15 +19,32 @@
     border-radius: 10px;
     background:#252525;
 }
-.popular-item
-{
+.popular-item {
     margin-top: 50px;
     display: flex;
-    gap:30px;
-    flex: 1;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    gap: 30px;
+    width: 100%;
+
 }
+.item *
+{
+    width: 210px;
+}
+.item {
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
 .item img {
-    /* width: 200px; */
-    /* height: auto;  */
-    object-fit: cover; /* Crops/fits image */
+    width: 70%;
+    height: auto;
+    object-fit: cover;
 }
