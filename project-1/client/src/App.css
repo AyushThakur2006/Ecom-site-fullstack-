@@ -1,0 +1,11 @@
+.content
+{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    padding-bottom: 420px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+    margin-top: 50%;
+}
