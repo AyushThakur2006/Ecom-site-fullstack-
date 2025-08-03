@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './css/Login.css'
+import axios from 'axios'
 const Login = () => {
   const userlogin=(e)=>
   {
     e.preventDefault()
+    axios.get('/')
   }
 
 const [data, setdata] = useState({
