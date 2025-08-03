@@ -21,7 +21,7 @@ const Register = () => {
         else
         {
           setdata({ name: '', email: '', password: ''})
-          toast.success('Login Successful. Welcome!');
+          toast.success('Registration Successful. Welcome!');
           navigate('/login')
         }
     }
